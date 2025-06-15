@@ -300,6 +300,9 @@ class HttpConfig(BaseSettings):
         default="",
     )
 
+    def set_CONSOLE_CORS_ALLOW_ORIGINS(self, val: str):
+        self.inner_CONSOLE_CORS_ALLOW_ORIGINS = val
+
     @computed_field
     def CONSOLE_CORS_ALLOW_ORIGINS(self) -> list[str]:
         return self.inner_CONSOLE_CORS_ALLOW_ORIGINS.split(",")
@@ -309,6 +312,9 @@ class HttpConfig(BaseSettings):
         validation_alias=AliasChoices("WEB_API_CORS_ALLOW_ORIGINS"),
         default="*",
     )
+
+    def set_WEB_API_CORS_ALLOW_ORIGINS(self, val: str):
+        self.inner_WEB_API_CORS_ALLOW_ORIGINS = val
 
     @computed_field
     def WEB_API_CORS_ALLOW_ORIGINS(self) -> list[str]:
