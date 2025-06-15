@@ -1,5 +1,5 @@
 [project]
-name = "morphix"
+name = "morphix-backend"
 version = "0.1.0"
 description = "Enterprise-grade agent application with workflow engine"
 authors = [
